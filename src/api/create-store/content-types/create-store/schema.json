@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "create_stores",
+  "info": {
+    "singularName": "create-store",
+    "pluralName": "create-stores",
+    "displayName": "create-store",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "storeName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "phoneNo": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "accept",
+        "progress ",
+        "decline",
+        "null"
+      ],
+      "default": "progress ",
+      "required": true
+    }
+  }
+}

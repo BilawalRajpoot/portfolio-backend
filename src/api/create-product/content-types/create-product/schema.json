@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "create_products",
+  "info": {
+    "singularName": "create-product",
+    "pluralName": "create-products",
+    "displayName": "create-product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productName": {
+      "type": "string",
+      "unique": true
+    },
+    "productDetail": {
+      "type": "string"
+    },
+    "productPrice": {
+      "type": "integer"
+    },
+    "productImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "productName"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "shirt",
+        "jean"
+      ]
+    },
+    "roles": {
+      "type": "enumeration",
+      "enum": [
+        "user ",
+        "admin"
+      ],
+      "default": "user "
+    }
+  }
+}
